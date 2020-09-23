@@ -1,0 +1,11 @@
+[template]
+src = "opendkim.conf.tmpl"
+dest = "/etc/opendkim/opendkim.conf"
+uid = 477
+gid = 477
+keys = [
+    "/dkim/domain",
+    "/dkim/keyfile",
+    "/dkim/selector",
+    "/dkim/internalhosts"
+]

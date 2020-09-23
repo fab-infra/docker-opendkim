@@ -1,0 +1,11 @@
+Background			No
+BaseDirectory		/run/opendkim
+Domain				{{getv "/dkim/domain" "localdomain"}}
+InternalHosts       {{getv "/dkim/internalhosts" "127.0.0.1"}}
+KeyFile				{{getv "/dkim/keyfile" "/var/lib/opendkim/private.key"}}
+Selector			{{getv "/dkim/selector" "default"}}
+Socket				inet:8891
+SubDomains			Yes
+Syslog				No
+TrustAnchorFile		/var/lib/unbound/root.key
+UserID				opendkim:opendkim
