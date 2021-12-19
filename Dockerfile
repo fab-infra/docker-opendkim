@@ -1,5 +1,5 @@
-# OpenDKIM server based on openSUSE Leap 15.2
-FROM ghcr.io/fab-infra/base-image:opensuse15.2
+# OpenDKIM server based on openSUSE Leap 15.3
+FROM ghcr.io/fab-infra/base-image:opensuse15.3
 
 # MariaDB
 RUN zypper in -y opendkim &&\
