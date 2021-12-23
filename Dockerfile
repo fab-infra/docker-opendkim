@@ -7,8 +7,7 @@ RUN zypper in -y opendkim &&\
 
 # Files
 COPY ./root /
-RUN chmod +x /run.sh &&\
-    cp -p /etc/opendkim/opendkim.conf /etc/opendkim/opendkim.default.conf &&\
+RUN cp -p /etc/opendkim/opendkim.conf /etc/opendkim/opendkim.default.conf &&\
     confd -onetime -backend env &&\
     chown -R opendkim:opendkim /etc/opendkim &&\
     chmod a+r /var/lib/unbound/root.key
