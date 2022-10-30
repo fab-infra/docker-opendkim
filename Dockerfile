@@ -1,5 +1,5 @@
-# OpenDKIM server based on openSUSE Leap 15.3
-FROM ghcr.io/fab-infra/base-image:opensuse15.3
+# OpenDKIM server based on openSUSE Leap 15.4
+FROM ghcr.io/fab-infra/base-image:opensuse15.4
 
 # Environment
 ENV DKIM_DOMAIN="localdomain" \
