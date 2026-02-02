@@ -15,7 +15,8 @@ RUN zypper in -y opendkim &&\
 COPY ./root /
 RUN cp -p /etc/opendkim/opendkim.conf /etc/opendkim/opendkim.default.conf &&\
 	confd -onetime -backend env &&\
-	chown -R opendkim:opendkim /etc/opendkim &&\
+	mkdir -p /run/opendkim &&\
+	chown -R opendkim:opendkim /etc/opendkim /run/opendkim &&\
 	chmod a+r /var/lib/unbound/root.key
 
 # Ports
